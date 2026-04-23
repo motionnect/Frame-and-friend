@@ -7,7 +7,7 @@ Based in Indore, **Frame & Friend** is a creative service designed for introvert
 ## ✨ Key Features
 * **Interactive Neo-Noir Slider:** Compare raw vs. edited footage directly on the site.
 * **Animated Navigation:** High-end UI using Lordicon animations.
-* **Mobile-First Design:** Optimized for clients booking on the go.
+* **Mobile-First Design:** Optimised for clients booking on the go.
 
 ## 🛠️ Tech Stack
 * **HTML5 / CSS3** (Custom Flexbox layout)
@@ -15,7 +15,7 @@ Based in Indore, **Frame & Friend** is a creative service designed for introvert
 * **Lordicon** (Animated SVG icons)
 
 ## 📸 Portfolio
-Check out the live site here: [Link to your GitHub Pages URL]
+Check out the live site here: https://motionnect.github.io/Frame-and-friend/
 
 ---
 *Crafted with cinematic love in Indore.*
