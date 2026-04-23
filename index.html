@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.lordicon.com/lordicon.js"></script> ```
+    <title>Frame & Friend | Cinematic Content Companion in Indore</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0f0f0f;
+            --bg-secondary: #1a1a1a;
+            --bg-tertiary: #252525;
+            --accent-mint: #7ef9b0;
+            --accent-amber: #ffb366;
+            --accent-rose: #ff6b9d;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-muted: #707070;
+            --glow-mint: rgba(126, 249, 176, 0.3);
+            --glow-amber: rgba(255, 179, 102, 0.3);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Atmospheric Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(126, 249, 176, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 179, 102, 0.04) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255, 107, 157, 0.02) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.01) 25%, rgba(255, 255, 255, 0.01) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.01) 75%, rgba(255, 255, 255, 0.01) 76%, transparent 77%, transparent),
+                linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.01) 25%, rgba(255, 255, 255, 0.01) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.01) 75%, rgba(255, 255, 255, 0.01) 76%, transparent 77%, transparent);
+            background-size: 50px 50px;
+            pointer-events: none;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.5rem 5%;
+            background: rgba(15, 15, 15, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(126, 249, 176, 0.1);
+            transform: translateY(-100%);
+            animation: slideDown 0.8s ease forwards;
+        }
+
+        @keyframes slideDown {
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-mint);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-mint);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .btn-nav {
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-amber));
+            border: none;
+            border-radius: 50px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--bg-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 30px var(--glow-mint);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 40px var(--glow-mint), 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 8rem 5% 4rem;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(126, 249, 176, 0.1), rgba(255, 179, 102, 0.1));
+            clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%);
+            opacity: 0;
+            animation: fadeInRight 1.5s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        .hero-image-space {
+            position: absolute;
+            top: 50%;
+            right: 5%;
+            transform: translateY(-50%);
+            width: 500px;
+            height: 600px;
+            border-radius: 20px;
+            border: 2px solid var(--accent-mint);
+            background: linear-gradient(135deg, rgba(15, 15, 15, 0.8), rgba(26, 26, 26, 0.8));
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+            opacity: 0;
+            animation: fadeInScale 1s ease forwards;
+            animation-delay: 0.8s;
+            overflow: hidden;
+        }
+
+        .hero-image-space::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1614108830714-74f0e4c8cd7e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+        }
+
+        .image-placeholder-text {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--accent-mint);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            z-index: 1;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        @keyframes fadeInRight {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: translateY(-50%) scale(1);
+            }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-text {
+            max-width: 700px;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent-mint));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .hero-tagline {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.95rem;
+            color: var(--accent-amber);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .btn-primary {
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-amber));
+            border: none;
+            border-radius: 50px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--bg-primary);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 30px var(--glow-mint);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 50px var(--glow-mint), 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-secondary {
+            padding: 1.2rem 3rem;
+            background: transparent;
+            border: 2px solid var(--accent-mint);
+            border-radius: 50px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-mint);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-mint);
+            color: var(--bg-primary);
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px var(--glow-mint);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 700px;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(126, 249, 176, 0.1);
+        }
+
+        .stat {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-mint);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
+        }
+
+        /* Section Styles */
+      /* Before/After Slider Styling */
+/* THE PORTRAIT CONTAINER */
+.card-comparison {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Locks the width on big screens */
+    height: 600px;    /* Forces portrait height */
+    margin: 0 auto;   /* Centers the card if the grid is wider */
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--accent-mint);
+    background: #000;
+}
+
+/* THE BACKGROUND (RAW) IMAGE */
+.comparison-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px !important; /* MUST match max-width above */
+    height: 600px !important;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* THE WIPE WRAPPER (THE CURTAIN) */
+.img-after-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 2;
+    border-right: 3px solid var(--accent-mint);
+}
+
+/* THE TOP (EDITED) IMAGE */
+.img-after-wrapper img {
+    /* This image must be the EXACT same size as the background one */
+    width: 400px !important; 
+    height: 600px !important;
+    object-fit: cover;
+    max-width: none;
+    display: block;
+}
+
+/* THE INVISIBLE SLIDER BOX */
+.card-slider-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% !important;
+    background: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    z-index: 10;
+    cursor: ew-resize;
+    margin: 0;
+}
+        section {
+            position: relative;
+            padding: 8rem 5%;
+            z-index: 1;
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .section-header.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-tag {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--accent-mint);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.4rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+      .before-label, .after-label {
+    position: absolute;
+    bottom: 20px;
+    padding: 4px 10px;
+    background: rgba(15, 15, 15, 0.8);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 4; /* Sits above images but below the slider */
+    pointer-events: none; /* User can click "through" them to the slider */
+    border-radius: 4px;
+}
+
+.after-label {
+    left: 20px;
+    color: var(--accent-mint);
+    border: 1px solid var(--accent-mint);
+}
+
+.before-label {
+    right: 20px;
+    color: var(--text-secondary);
+    border: 1px solid var(--text-muted);
+}
+
+        /* Experience Section */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .experience-card {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(126, 249, 176, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .experience-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .experience-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, var(--glow-mint) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .experience-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .experience-card:hover {
+            border-color: var(--accent-mint);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--accent-mint);
+            opacity: 0.2;
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .card-description {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-note {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(126, 249, 176, 0.05);
+            border-left: 4px solid var(--accent-mint);
+            border-radius: 8px;
+            font-size: 1rem;
+            color: var(--accent-mint);
+            font-style: italic;
+        }
+
+        /* Pricing Section */
+        #pricing {
+            background: var(--bg-secondary);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .pricing-card {
+            background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-primary));
+            border: 2px solid rgba(126, 249, 176, 0.1);
+            border-radius: 24px;
+            padding: 3.5rem;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .pricing-card.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .pricing-card:hover {
+            border-color: var(--accent-mint);
+            transform: scale(1.05);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent-mint);
+            box-shadow: 0 0 60px var(--glow-mint);
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            padding: 0.6rem 1.5rem;
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-amber));
+            border-radius: 50px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--bg-primary);
+        }
+
+        .package-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .package-duration {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .package-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--accent-mint);
+            margin-bottom: 1rem;
+        }
+
+        .package-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .package-features {
+            list-style: none;
+            margin-bottom: 3rem;
+        }
+
+        .package-features li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(126, 249, 176, 0.1);
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .package-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-mint);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+
+        .price-note {
+            padding: 1.5rem;
+            background: rgba(255, 179, 102, 0.08);
+            border-left: 4px solid var(--accent-amber);
+            border-radius: 8px;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-top: 2rem;
+            line-height: 1.7;
+        }
+
+        .pricing-footer-note {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem;
+            background: rgba(126, 249, 176, 0.05);
+            border-radius: 16px;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Add-ons Section */
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .addon-card {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(255, 179, 102, 0.15);
+            border-radius: 20px;
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+
+        .addon-card.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .addon-card:hover {
+            border-color: var(--accent-amber);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(255, 179, 102, 0.2);
+        }
+
+        .addon-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-amber);
+            margin-bottom: 1.5rem;
+        }
+
+        .addon-price {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.4rem;
+            color: var(--accent-mint);
+            margin-bottom: 2rem;
+        }
+
+        .addon-description {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 6rem;
+            align-items: center;
+            margin-top: 4rem;
+        }
+
+        .about-visual {
+            width: 100%;
+            height: 550px;
+            background: linear-gradient(135deg, rgba(126, 249, 176, 0.1), rgba(255, 179, 102, 0.1));
+            border-radius: 24px;
+            border: 2px solid var(--accent-mint);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: scale(0.9) rotate(-5deg);
+            transition: all 1s ease;
+        }
+
+        .about-visual.visible {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+
+        .about-visual {
+    width: 100%;
+    height: 550px;
+    background: url('https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?q=80&w=1085&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+    border-radius: 24px;
+    border: 2px solid var(--accent-mint);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.9) rotate(-5deg);
+    transition: all 1s ease;
+}
+
+        .about-text {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease;
+        }
+
+        .about-text.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .about-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            color: var(--accent-mint);
+        }
+
+        .about-text p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            line-height: 2;
+            margin-bottom: 2rem;
+        }
+
+        /* Safety Section */
+        #safety {
+            background: var(--bg-secondary);
+        }
+
+        .safety-intro {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 5rem;
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+        }
+
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .safety-item {
+            background: var(--bg-primary);
+            border: 1px solid rgba(126, 249, 176, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.6s ease;
+        }
+
+        .safety-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .safety-item:hover {
+            border-color: var(--accent-mint);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .safety-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-amber));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+        }
+
+        .safety-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .safety-description {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-primary);
+            border-top: 1px solid rgba(126, 249, 176, 0.1);
+            padding: 6rem 5% 3rem;
+            position: relative;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 6rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .footer-cta p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .footer-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            padding: 1.2rem 2.5rem;
+            background: transparent;
+            border: 2px solid var(--accent-mint);
+            border-radius: 50px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-mint);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .social-btn:hover {
+            background: var(--accent-mint);
+            color: var(--bg-primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px var(--glow-mint);
+        }
+
+        .footer-info h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--accent-mint);
+        }
+
+        .footer-info p {
+            color: var(--text-secondary);
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(126, 249, 176, 0.1);
+            color: var(--text-muted);
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(15px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal {
+            background: var(--bg-secondary);
+            border: 2px solid var(--accent-mint);
+            border-radius: 24px;
+            padding: 4rem;
+            max-width: 550px;
+            width: 90%;
+            position: relative;
+            transform: scale(0.8);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .modal-overlay.active .modal {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            color: var(--accent-mint);
+            transform: rotate(90deg);
+        }
+
+        .modal h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            color: var(--accent-mint);
+        }
+
+        .modal p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-direction: column;
+        }
+
+        .modal-btn {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, var(--accent-mint), var(--accent-amber));
+            border: none;
+            border-radius: 50px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--bg-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .modal-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px var(--glow-mint);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--accent-mint);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero-image-space {
+                width: 400px;
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-image-space {
+                position: relative;
+                right: auto;
+                transform: none;
+                margin: 3rem auto 0;
+                width: 100%;
+                max-width: 500px;
+            }
+
+            .hero-background {
+                display: none;
+            }
+
+            .about-content,
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+            }
+
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                padding: 1rem 3%;
+            }
+
+            section {
+                padding: 5rem 3%;
+            }
+
+            .hero {
+                padding: 6rem 3% 3rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .experience-grid,
+            .pricing-grid,
+            .addons-grid,
+            .safety-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons,
+            .footer-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-primary,
+            .btn-secondary,
+            .social-btn,
+            .btn-nav {
+                width: 100%;
+                text-align: center;
+            }
+
+            .modal {
+                padding: 2.5rem;
+            }
+
+            .modal h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo">Frame & Friend</div>
+            <ul class="nav-links">
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#addons" class="nav-link">Add-ons</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#safety" class="nav-link">Safety</a></li>
+            </ul>
+            <button class="mobile-menu-toggle">☰</button>
+            <a href="#book" class="btn-nav" onclick="openModal(); return false;">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background"></div>
+        <div class="hero-image-space">
+
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Life is a Movie, Let's film yours .</h1>
+                <p class="hero-subtitle">Part Content Companion, part Cinephile Friend.</p>
+                <p class="hero-tagline">📍 Based in Indore</p>
+                <p class="hero-description">Capturing the nostalgia of a Ghibli sunset with the sharp shadows of a Neo-Noir night.</p>
+                <div class="hero-buttons">
+                    <a href="#book" class="btn-primary" onclick="openModal(); return false;">📸 Book an Outing</a>
+                    <a href="#experience" class="btn-secondary">🎬 Explore Services</a>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">What We Do</div>
+                <h2 class="section-title">The Experience</h2>
+                <p class="section-subtitle">More than just photography—it's a journey through Indore's hidden aesthetics</p>
+            </div>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="card-number">01</div>
+                    <h3 class="card-title">Companionship & Capture</h3>
+                    <p class="card-description">
+                        I join you for your outing so you never have to explore alone. Whether it's coffee at Arbre 
+                        or a night walk through Rajwada, I'm your "Friend" for the day. We'll talk cinema, anime, 
+                        gaming, or whatever vibes with you while I discreetly capture your moments.
+                    </p>
+                </div>
+                <div class="experience-card">
+                    <div class="card-number">02</div>
+                    <h3 class="card-title">Raw Mastery</h3>
+                    <p class="card-description">
+                        While we explore and talk cinema, anime, or gaming, I use a phone and magic arm to capture 
+                        high-end raw footage and photos of you. Professional quality without the awkward "camera guy" 
+                        presence. Just two friends hanging out, creating content.
+                    </p>
+                </div>
+                <div class="experience-card">
+                    <div class="card-number">03</div>
+                    <h3 class="card-title">Pure Shooting</h3>
+                    <p class="card-description">
+                        Base packages include shooting only. You receive all high-quality raw files immediately 
+                        after our session to use however you like. Full creative control in your hands. Edit them 
+                        yourself or choose from our post-production add-ons.
+                    </p>
+                    <div class="card-note">
+                        💡 Note: All base packages are raw shooting only. Post-production editing available as add-ons.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Pricing</div>
+
+                <p class="section-subtitle">Simple, transparent pricing that won't break the bank</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Package 1 -->
+                <div class="pricing-card">
+                    <h3 class="package-name">The Short Film</h3>
+                    <p class="package-duration">1 Hour Session</p>
+                    <div class="package-price">₹499</div>
+                    <p class="package-subtitle">A quick aesthetic session at one location. Perfect for testing the vibe.</p>
+                    <ul class="package-features">
+                        <li>1 hour shooting time</li>
+                        <li>Single location of your choice</li>
+                        <li>All raw files included</li>
+                        <li>Immediate delivery post-session</li>
+                        <li>Cinematic conversation included</li>
+                    </ul>
+                    <a href="#book" class="btn-primary" onclick="openModal(); return false;" style="width: 100%; text-align: center; display: block; padding: 1rem;">Book This Package</a>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="pricing-card">
+                    <h3 class="package-name">The Feature</h3>
+                    <p class="package-duration">2 Hours Session</p>
+                    <div class="package-price">₹899</div>
+                    <p class="package-subtitle">Two locations with more time to explore varied angles and vibes.</p>
+                    <ul class="package-features">
+                        <li>2 hours shooting time</li>
+                        <li>Two different locations</li>
+                        <li>All raw files included</li>
+                        <li>More angles & varied settings</li>
+                        <li>Deep cinema conversations</li>
+                        <li>Multiple outfit/vibe changes</li>
+                    </ul>
+                    <a href="#book" class="btn-primary" onclick="openModal(); return false;" style="width: 100%; text-align: center; display: block; padding: 1rem;">Book This Package</a>
+                </div>
+
+                <!-- Package 3 - Featured -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Best Value</div>
+                    <h3 class="package-name">The Director's Cut</h3>
+                    <p class="package-duration">4 Hours Session</p>
+                    <div class="package-price">₹1,100</div>
+                    <p class="package-subtitle">A deep dive into Indore. Perfect for multiple "vibe" changes and locations.</p>
+                    <ul class="package-features">
+                        <li>4 hours shooting time</li>
+                        <li>Multiple locations across Indore</li>
+                        <li>All raw files included</li>
+                        <li>Complete vibe exploration</li>
+                        <li>Deep cinema & art conversations</li>
+                        <li>Multiple outfit changes</li>
+                        <li>Sunset/golden hour coverage</li>
+                    </ul>
+                    <a href="#book" class="btn-primary" onclick="openModal(); return false;" style="width: 100%; text-align: center; display: block; padding: 1rem;">Book This Package</a>
+                    <div class="price-note">
+                        🎬 <strong>Best Value:</strong> For just ₹200 more than the 2-hour session, you get double the time and double the content! Perfect for creating a full visual story.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pricing-footer-note">
+                💳 <strong>Important:</strong> All packages require the client to cover expenses including entry tickets, travel costs, and meals during the session.
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-ons Section -->
+    <section id="addons">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Post-Production</div>
+                <h2 class="section-title">The Instagram Flex</h2>
+                <p class="section-subtitle">Transform your raw footage into cinematic masterpieces with professional editing</p>
+            </div>
+            <div class="section-container">
+    
+                <div class="addon-card">
+                    <h3 class="addon-title">Cinematic Reel Edit</h3>
+                    <p class="addon-price">Starting at ₹399</p>
+                    <p class="addon-description">
+                        High-energy sync with trending audio, professional colour grading, smooth transitions, 
+                        and sound effects. Make your footage look like a movie trailer. Perfect for Instagram Reels 
+                        that'll stop the scroll.
+                    </p>
+                </div>
+                <div class="addon-card visible">
+    <div class="card-comparison">
+        <img class="comparison-img" src="https://i.imgur.com/OxoohOQ.jpeg" alt="Raw">
+        
+        <div class="img-after-wrapper" id="portraitWipe">
+            <img src="https://i.imgur.com/qhfujh8.jpeg" alt="Edit">
+        </div>
+<div class="after-label">After</div>
+<div class="before-label">Before</div>
+
+<input type="range" ... >
+        <input type="range" min="0" max="100" value="50" class="card-slider-input" 
+               oninput="document.getElementById('portraitWipe').style.width = this.value + '%'">
+    </div>
+
+    <h3 class="addon-title">Special colour Photo Pack</h3>
+    <p class="addon-price">Starting at ₹499</p>
+    <p class="addon-description">
+        Moody colour grading for 10 select photos. Deep shadows and cinematic highlights.
+    </p>
+</div>
+                <div class="addon-card">
+                    <h3 class="addon-title">Custom "Vibe" Edit</h3>
+                    <p class="addon-price">Price based on complexity</p>
+                    <p class="addon-description">
+                        Want a specific aesthetic? Ghibli dreamscape with soft pastels? Blade Runner nights with neon? 
+                        Wes Anderson symmetry? Tell me your vision, and I'll craft it. Custom colour grading, effects, 
+                        and storytelling.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">The Cinephile Promise</div>
+                <h2 class="section-title">Not just a guy with a camera</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-visual"></div>
+                <div class="about-text">
+                    <h3>The Vision Behind Frame & Friend</h3>
+                    <p>
+                        I'm a filmmaking student in Indore who lives and breathes cinema. From Nolan's mathematical 
+                        symmetry to Miyazaki's soul-stirring landscapes, from the lore of Dark Souls to the narrative 
+                        depth of The Last of Us—I find stories everywhere.
+                    </p>
+                    <p>
+                        I started Frame & Friend for the introverts and dreamers who want to look like the main character 
+                        of their own story without the social awkwardness. For the people who understand that aesthetic 
+                        isn't vanity—it's self-expression.
+                    </p>
+                    <p>
+                        This isn't just photography. It's about creating moments that feel like they belong in a film. 
+                        Every frame tells a story, and every story deserves to be captured with intention, artistry, 
+                        and a deep understanding of visual language.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Section -->
+    <section id="safety">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="section-tag">Safety & Trust</div>
+                <h2 class="section-title">Stealth Mode</h2>
+                <p class="section-subtitle">Your safety and comfort are paramount. Always.</p>
+            </div>
+            <p class="safety-intro">
+                We operate in complete transparency and professionalism. No bulky cameras, no awkward setups, 
+                no red flags. Just two people creating art in public spaces, with every safety measure in place.
+            </p>
+            <div class="safety-grid">
+                <div class="safety-item">
+                    <div class="safety-icon">
+    <lord-icon src="https://cdn.lordicon.com/bpmglzll.json" trigger="hover" colors="primary:#ff0000" style="width:50px;height:50px"></lord-icon>
+</div>
+                    <h4 class="safety-title">Public Places Only</h4>
+                    <p class="safety-description">
+                        We meet exclusively in high-traffic, well-lit public spots like Chappan Dukan, Phoenix Citadel, 
+                        Sarafa Bazaar, or popular cafes. Never isolated locations.
+                    </p>
+                </div>
+                <div class="safety-item">
+                    <div class="safety-icon">🛡️</div>
+                    <h4 class="safety-title">Platonic & Professional</h4>
+                    <p class="safety-description">
+                        This is a strictly professional creative service with clear boundaries. No exceptions, 
+                        no grey areas. We're here to create content, not complications.
+                    </p>
+                </div>
+                <div class="safety-item">
+                    <div class="safety-icon">
+    <lord-icon
+        src="https://cdn.lordicon.com/rhrmfnhf.json"
+        trigger="hover"
+        colors="primary:#1b1b1b" 
+        style="width:50px;height:50px">
+    </lord-icon>
+</div>
+                    <h4 class="safety-title">Discreet Gear</h4>
+                    <p class="safety-description">
+                        No bulky cameras or tripods that draw attention. Just a phone, a magic arm, and a vision. 
+                        We'll look like two friends hanging out—because that's exactly what we are.
+                    </p>
+                </div>
+                <div class="safety-item">
+                    <div class="safety-icon">🗺️</div>
+                    <h4 class="safety-title">Live Location Tracking</h4>
+                    <p class="safety-description">
+                        I share my live location with an emergency contact during every session for mutual safety. 
+                        Your comfort matters, and transparency builds trust.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-cta">
+                <h2>Ready for Your Scene?</h2>
+                <p>
+                    Let's create something unforgettable together. Your story deserves to be told cinematically, 
+                    and Indore is waiting to be your backdrop.
+                </p>
+                <div class="footer-buttons">
+                    <a href="https://instagram.com/frame.and.friend" target="_blank" class="social-btn">📷 DM "Vibe Check" on Instagram</a>
+                    <a href="https://wa.me/1234567890" target="_blank" class="social-btn">💬 Message on WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-info">
+                <h4>Connect with Us</h4>
+                <p>📷 Follow @frame.and.friend for daily Indore aesthetics</p>
+                <p>📍 Based in Indore, Madhya Pradesh</p>
+                <p>💬 Available for bookings and collaborations</p>
+                <p>🎬 Creating cinematic moments, one frame at a time</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Frame & Friend. Crafted with cinematic love in Indore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h2>Book Your Scene</h2>
+            <p>Ready to create something cinematic? Choose your preferred way to connect and let's plan your perfect shoot:</p>
+            <div class="modal-buttons">
+                <a href="https://instagram.com/frame.and.friend" target="_blank" class="modal-btn">
+                    📷 DM "Vibe Check" on Instagram
+                </a>
+                <a href="https://wa.me/8109674258?text=Hi!%20I'd%20like%20to%20book%20a%20Frame%20%26%20Friend%20session.%20" target="_blank" class="modal-btn">
+                    💬 Message on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.addEventListener('DOMContentLoaded', () => {
+            // Headers
+            document.querySelectorAll('.section-header').forEach(el => observer.observe(el));
+            
+            // Cards
+            document.querySelectorAll('.experience-card').forEach(el => observer.observe(el));
+            document.querySelectorAll('.pricing-card').forEach(el => observer.observe(el));
+            document.querySelectorAll('.addon-card').forEach(el => observer.observe(el));
+            document.querySelectorAll('.safety-item').forEach(el => observer.observe(el));
+            
+            // About section
+            document.querySelectorAll('.about-visual, .about-text').forEach(el => observer.observe(el));
+        });
+
+        // Modal Functions
+        function openModal() {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('bookingModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on overlay click
+        document.getElementById('bookingModal').addEventListener('click', (e) => {
+            if (e.target.id === 'bookingModal') {
+                closeModal();
+            }
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#book') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Parallax effect on hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroBackground = document.querySelector('.hero-background');
+            const heroImage = document.querySelector('.hero-image-space');
+            
+            if (heroBackground) {
+                heroBackground.style.transform = `translateY(${scrolled * 0.3}px)`;
+            }
+            if (heroImage && window.innerWidth > 1024) {
+                heroImage.style.transform = `translateY(calc(-50% + ${scrolled * 0.2}px))`;
+            }
+        });
+
+        // Add subtle hover effect to pricing cards
+        document.querySelectorAll('.pricing-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+      function moveSlider(value) {
+    const afterWrapper = document.getElementById('afterWrapper');
+    afterWrapper.style.width = value + "%";
+}
+    </script>
+</body>
+</html>
